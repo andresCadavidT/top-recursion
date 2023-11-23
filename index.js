@@ -7,9 +7,12 @@ function mergeSort(toSort){
     return merge(left,right)
 } 
 
-console.log("FINAL ANSWER",mergeSort([9, 8, 7, 6,7, 5, 4, 3, 2, 1]))
+console.log("FINAL ANSWER",mergeSort([9, 8, 7, 6,7, 5, 4, 3, 2, 1,-2]))
 
-function merge(a, b, m = 0, n = 0, result = []){
+function merge(a, b){
+    let m = 0
+    let n = 0
+    let result = []
     while((a.length > m) && (b.length > n)){
         if(a[m] <= b[n]) { result.push(a[m++])}
         if(b[n] <= a[m]) { result.push(b[n++])}
